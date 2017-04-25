@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # if routing the root path, update for your controller
   root to: 'pages#show', id: 'home'
   get 'users/index'
-  get "facebookmessages/facebookmessages"
+  get "facebookmessanger/fbmessage"
   # match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 
   resources :dashboard, only: [:index]
