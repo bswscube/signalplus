@@ -1,4 +1,4 @@
-class UrlsController < ApplicationController
-  def facebookmessages
+class FacebookMessanger < ApplicationController
+  def fbmessage
   end
 end
