@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   root to: 'pages#show', id: 'home'
   resources :urls, :only => [:show, :new, :create]
   get 'users/index'
-  get "urls/new"
+  get "urls/facebookApp"
   # match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 
   resources :dashboard, only: [:index]
