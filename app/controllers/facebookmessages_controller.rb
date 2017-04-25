@@ -1,5 +1,4 @@
 class UrlsController < ApplicationController
-  def new
+  def facebookmessages
   end
-
 end
