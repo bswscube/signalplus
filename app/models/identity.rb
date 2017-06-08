@@ -27,7 +27,8 @@ class Identity < ApplicationRecord
 
   module Provider
     ALL = [
-      TWITTER = 'twitter'
+      TWITTER = 'twitter',
+      FACEBOOK = 'facebook'
     ]
   end
 

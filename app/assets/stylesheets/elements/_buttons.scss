@@ -154,6 +154,8 @@
   margin-top: 22px;
   text-decoration: none;
   font-size: 18px;
+  padding: 10px;
+  line-height: 24px;
 }
 
 .edit-btns {
@@ -262,11 +264,32 @@
 
 .delete-timed-response-btn {
   float: right;
-  line-height: 100px;
+  line-height: 80px;
   margin-right: 30px;
   text-decoration: underline;
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.dropdown{
+  float: left;
+}
+
+.edit-btns .dropdown-menu{
+  left: -40px;
+  text-align: left !important;
+  border-radius: 10px;
+  border: 1px solid #589dd2;
+  color: #589dd2;
+}
+
+.edit-btns .dropdown-menu li a{
+  cursor: pointer;
+  color: #589dd2;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 15px;
 }

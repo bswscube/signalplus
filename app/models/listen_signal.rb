@@ -34,6 +34,7 @@ class ListenSignal < ApplicationRecord
     CONTEST     = :contest
     REMINDER    = :reminder
     CUSTOM      = :custom
+    SUPPORT      = :support
 
     def self.values
       constants.map{ |t| const_get(t) }

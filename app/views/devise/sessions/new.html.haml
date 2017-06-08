@@ -2,10 +2,12 @@
 .login-form
   .form-header
     %p#login-header
-      Sign in with your brand's Twitter account
+      Sign in with your brand's social account to get started
   .log-in-btns
     = render 'devise/shared/links'
-    = link_to 'CREATE A TWITTER ACCOUNT', 'https://twitter.com/signup', :class => 'btn btn-login twitter-create-link'
-  .forgot-login
-    %a{ :href => "https://twitter.com/account/begin_password_reset"}
-      Forgot your password?
+
+.sign-up-form
+  %p#sign-up-header
+    Don’t have an account?
+  = link_to  image_tag("social/facebook.png", class:'sign-up-icon') + 'Get a Facebook account', 'https://www.facebook.com/', :class => 'sign-up-link'
+  = link_to  image_tag("social/twitter.png", class:'sign-up-icon') + 'Get a Twitter account', 'https://twitter.com/signup', :class => 'sign-up-link'

@@ -15,8 +15,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     }
   end
 
-  provider = :twitter
-  provides_callback_for(provider)
+
+  [:twitter, :facebook].each do |provider|
+    provides_callback_for(provider)
+  end
+
+  # provider = :twitter
+  # provides_callback_for(provider)
 
   def after_sign_in_path_for(resource)
     if resource.subscription?

@@ -20,5 +20,3 @@ class Api::V1::PromotionalTweetsController < Api::V1::BaseController
     params.permit(:listen_signal_id, :message, :encoded_image)
   end
 end
-
-

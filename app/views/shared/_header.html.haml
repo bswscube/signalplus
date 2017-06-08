@@ -11,6 +11,8 @@
     / Collection of nav links and other content for toggling
     #navbarCollapse.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
+        %li= link_to 'IDEAS', page_path(id: 'support')
+        %li= link_to 'SERVICES', page_path(id: 'support')
         %li= link_to 'SUPPORT', page_path(id: 'support')
         - path = current_user ? dashboard_index_path : new_user_session_path
         - link_text = current_user ? 'DASHBOARD' : 'LOG IN'

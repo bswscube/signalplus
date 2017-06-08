@@ -37,8 +37,7 @@ class User < ApplicationRecord
   before_save :log_changing_of_tokens
 
   # Include default devise modules.
-  devise :omniauthable, :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :omniauthable, :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   TEMP_EMAIL_PREFIX = 'change@me'
   TEMP_EMAIL_REGEX = /\Achange@me/

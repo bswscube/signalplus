@@ -183,4 +183,3 @@ const hooks = {
 };
 
 export default provideHooks(hooks)(ConnectedContentPanel);
-

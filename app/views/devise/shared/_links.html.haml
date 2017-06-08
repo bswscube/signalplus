@@ -1,6 +1,6 @@
 - if devise_mapping.omniauthable?
   - resource_class.omniauth_providers.each do |provider|
-    = link_to image_tag('social/twitter-white.png', width:'32', height:'27', class:'icon') + "Sign in with #{OmniAuth::Utils.camelize(provider)}".upcase, omniauth_authorize_path(resource_name, provider), :class => "btn btn-login #{provider}-log-in-link"
+    = link_to image_tag("social/#{provider}-white.png",  class:'icon') + "Sign in with #{OmniAuth::Utils.camelize(provider)}".upcase, omniauth_authorize_path(resource_name, provider), :class => "btn btn-login #{provider}-log-in-link"
 /
   <haml_silent> if controller_name != &#39;sessions&#39; </haml_silent><haml_block>
   <haml_loud> link_to &quot;Log in&quot;, new_session_path(resource_name) </haml_loud><br />

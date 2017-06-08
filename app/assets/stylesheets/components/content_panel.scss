@@ -30,11 +30,13 @@
   textarea {
     font-size: $base-font-size;
     width: $width !important;
-    height: 100px;
+    height: 80px;
     background-color: $text-white;
     border: solid 1px $signal-border;
     border-radius: 11px;
     padding: 10px;
+    resize: none;
+    margin-left: 20px;
   }
 }
 
@@ -53,11 +55,12 @@
   float: right;
   width: 400px;
   height: 70px;
+  display: none;
 }
 
 .content-icon {
   height: 50px;
-  float: left;
+  // float: left;
   display: block;
   margin-right: 15px;
 }
@@ -68,14 +71,14 @@
 }
 
 .signal-type-header {
-    display: inline-block;
-    width: 200px;
+    display: block;
+    width: 100%;
     margin: 0 !important;
     padding-bottom: 5px;
 }
 
 .signal-description {
-  width: 350px;
+  width: 100%;
   height: 28px;
   display: inline-block;
   font-size: 18px;
@@ -127,7 +130,7 @@
 }
 
 .response-edit-box {
-  @include input-form(130px);
+  @include input-form(100px);
 
   p {
     width: 180px;
@@ -165,7 +168,7 @@
   width: 100px;
   float: right;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 25px;
   opacity: 0.7;
   background-color: $text-white;
   border-radius: 3px;
@@ -268,4 +271,37 @@ img.arrow {
     display: inline-block;
     top: 5px;
   }
+}
+
+.content-icon-main{
+  float: left;
+}
+.content-main{
+  float: left;
+  width: 88%;
+}
+
+.signal-instruction div{
+  width: 68%;
+}
+
+.signal-instruction-text {
+  font-size: 26px;
+  float: left;
+  padding: 0px 10px;
+  margin-right: 10px;
+}
+
+.signalLabel{
+  width: 70%;
+}
+
+.signalResponseInput{
+  height: 40px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.checkboxSide{
+  margin-left: 20px;
 }

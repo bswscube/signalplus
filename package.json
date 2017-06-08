@@ -7,8 +7,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.3.0",
     "browser-cookies": "^1.0.8",
-    "browserify": "^13.1.0",
-    "browserify-incremental": "^3.1.1",
+    "browserify": "^14.0.0",
+    "browserify-incremental": "^3.1.0",
     "classnames": "^2.2.5",
     "comma-number": "^1.1.0",
     "envify": "^3.4.1",
@@ -44,5 +44,11 @@
   "license": "MIT",
   "engines": {
     "node": ">= 0.10"
-  }
+  },
+
+  "repository": {
+   "type" : "git",
+   "url" : "http://github.com/npm/npm.git"
+ }
+
 }

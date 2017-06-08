@@ -21,6 +21,8 @@ class DashboardController < ApplicationController
         'Run a contest for your followers for a specific date range'
       when ListenSignal::Types::REMINDER
         'Send a reminder on a specific date to users when they use a custom hashtag'
+      when ListenSignal::Types::SUPPORT
+        'Notity users that you received their customer service request'
     end
   end
 

@@ -2,12 +2,13 @@ import React from 'react';
 
 function getIcon(type) {
   const iconTypes = {
-    offers:      window.__IMAGE_ASSETS__.iconsOffersSvg,
-    contest:     window.__IMAGE_ASSETS__.iconsContestSvg,
-    today:       window.__IMAGE_ASSETS__.iconsTodaySvg,
+    offers:      window.__IMAGE_ASSETS__.iconsOffersPng,
+    contest:     window.__IMAGE_ASSETS__.iconsContestPng,
+    today:       window.__IMAGE_ASSETS__.iconsTodayPng,
+    support:       window.__IMAGE_ASSETS__.iconsSupportPng,
     bell:        window.__IMAGE_ASSETS__.iconsBellSvg,
     close:       window.__IMAGE_ASSETS__.iconsCloseSvg,
-    reminder:    window.__IMAGE_ASSETS__.iconsReminderSvg,
+    reminder:    window.__IMAGE_ASSETS__.iconsReminderPng,
     clock:        window.__IMAGE_ASSETS__.iconsClockPng,
     welcome:     window.__IMAGE_ASSETS__.iconsSplusPurplePng,
     create:      window.__IMAGE_ASSETS__.iconsSignalplusSmallSvg,

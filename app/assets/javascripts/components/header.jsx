@@ -29,6 +29,8 @@ function Header({ brandUserName, showAccountLink }) {
             </div>
             <div id="navbarCollapse" className="collapse navbar-collapse">
               <ul className="nav navbar-nav navbar-right">
+                <li><a href="/support">IDEAS</a></li>
+                <li><a href="/support">SERVICES</a></li>
                 <li><a href="/support">SUPPORT</a></li>
                 <li className="dropdown-open">
                   <a className="dropdown-toggle header-cta" data-toggle="dropdown" role="button">

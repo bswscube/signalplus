@@ -53,11 +53,11 @@ class Api::V1::ListenSignalsController < Api::V1::BaseController
   end
 
   def create_response_params
-    params.permit(:default_response, :repeat_response, { responses: [:id, :message, :expiration_date] })
+    params.permit(:default_response, :repeat_response, { responses: [:id, :message, :expiration_date, :res_start_date] })
   end
 
   def update_signal_params
-    params.permit(:signal_type, :expiration_date)
+    params.permit(:signal_type, :expiration_date, :res_start_date)
   end
 
   def patch_signal_params
@@ -93,7 +93,7 @@ class Api::V1::ListenSignalsController < Api::V1::BaseController
         ListenSignal::Types::TODAY => 'Send a summary of your location or event each day a follower uses a custom hashtag',
         ListenSignal::Types::CONTEST => 'Run a contest for your followers for a specific date range',
         ListenSignal::Types::REMINDER => 'Send a reminder on a specific date to users when they use a custom hashtag',
-        ListenSignal::Types::CUSTOM => 'Create your own custom response whenever a follower sends a custom hashtag'      }
+        ListenSignal::Types::CUSTOM => 'Create your own custom response whenever a follower sends a custom hashtag',    ListenSignal::Types::SUPPORT => 'Notity users that you received their customer service request'    }
     }
   end
 

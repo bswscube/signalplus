@@ -22,6 +22,11 @@
     font-weight: bold;
     color: $light-gray;
     cursor: pointer;
+    padding: 8px 33px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 16px;
 
     > .caret {
       border-top-width: 7px;

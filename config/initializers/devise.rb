@@ -3,10 +3,11 @@
 Devise.setup do |config|
 
   # Oauth Social Media Keys
-  config.omniauth :twitter, ENV["TW_KEY"], ENV["TW_SECRET"]
+  config.omniauth :twitter, 'OwkeW3v6vKLEdr14XY4JmbHKL', '2gTCaeEGWdx1O6csOPiHDrpClsbZ5geHYthQN6Lx9Iy92bTRDg'
+  config.omniauth :facebook, '443288456036721', '92a41ebc3ef4d9d0b72492f9ba554ff5'
+
   # config.omniauth :facebook, ENV["FB_KEY"], ENV["FB_SECRET"]
-
-
+  # config.omniauth :twitter, 'Y92FjN1nj1YUTlnx1J44ByIyR', '798d3f96b00f82c2e76c10d9c91a993e'
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
@@ -22,6 +23,7 @@ Devise.setup do |config|
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
+  # http://localhost:3000/auth/facebook/callback
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and

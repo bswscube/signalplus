@@ -13,7 +13,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 350px;
-  height: 350px;
+  height: 280px;
   border-radius: 6px;
   background-color: $signal-white;
   box-shadow: $box-shadow1;
@@ -21,18 +21,18 @@
 
 #login-header {
   padding-top: 29.4px;
-  padding-left: 15px;
+  padding-left: 25px;
   margin-bottom: 65.5px;
   width: 278px;
   height: 52px;
   opacity: 0.7;
-  font-size: 24px;
+  font-size: 20px;
   color: $text-black;
-  margin-top: 29.4
 }
 
 .icon {
   margin-right: 12.5px;
+  margin-top: -5px;
 }
 
 .twitter-create-link {
@@ -48,4 +48,29 @@
     font-size: 18px;
     color: $text-black;
   }
+}
+
+.sign-up-form{
+  width: 350px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+#sign-up-header{
+  padding: 10px;
+  font-size: 20px;
+  opacity: 0.7;
+  color: $text-black;
+}
+.sign-up-icon{
+  margin-left: 10px;
+  margin-right: 15px;
+  margin-top: -5px;
+}
+.sign-up-link{
+  display: block;
+  margin-bottom: 15px;
+  color: $text-black;
+  text-decoration: underline;
+  font-size: 16px;
 }

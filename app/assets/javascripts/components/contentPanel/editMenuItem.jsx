@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 import InputBox from 'components/forms/inputBox';
+import Checkbox from 'components/forms/checkbox';
+import SignalIcon from 'components/links/signal_icon';
 import ActivateSignalRadioButton from 'components/forms/activateSignalRadioButton';
 import _ from 'lodash';
 
@@ -26,20 +28,33 @@ function renderSignalName(signal) {
   return <div>{`#${signal.name}`}</div>;
 }
 
+
 export default function EditMenuItem({ menu, signal }) {
   return (
     <li className="uctext">
+      <div className="editMenuItem editMenuItemOne">
+        <Checkbox
+          name="facebook"
+          label='Facebook'
+          labelDescription="@brandhandle"
+          className="checkboxSide"
+        />
+        <Checkbox
+          name="twitter"
+          label='Twitter'
+          labelDescription="@brandhandle"
+          className="checkboxSide"
+        />
+      </div>
+
       <Link
         {...menu.linkProps}
         activeClassName="active"
         className="editMenuItem"
       >
-        <label className="signalLabel">
-          <span className="caption">SIGNAL NAME</span>
-          {signal.id ? renderSignalName(signal) : renderInputBox(signal)}
-        </label>
         <ActivateSignalRadioButton signal={signal}/>
       </Link>
+
     </li>
   );
 }

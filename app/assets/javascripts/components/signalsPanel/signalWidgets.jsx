@@ -12,16 +12,16 @@ function renderSignalWidgets(signals) {
     const signalClasses = cn(
       'panel',
       'signal-panel',
-      signal_type,
+      'active-tab',
       { inactiveSignal: !active }
     );
 
     return (
       <Link to={`/dashboard/signals/${id}`} className={signalClasses} key={`signal_${id}`}>
-        <SignalIcon className='panel-icon' src={window.__IMAGE_ASSETS__[`icons${_.capitalize(signal_type)}Svg`]} />
+        <div className="panel-active-platform"> Fb, Tw, In </div>
         <div className='panel-header'>{`#${name}`}</div>
         <div className='panel-text'>
-          { signal_type == 'offers' && 'Send your users a special offer every time they send a custom hashtag'}
+          { signal_type == 'offers' && 'Send your users a special offer every time they send a custom hashtag.'}
           { signal_type == 'custom' && 'Create your own custom response whenever a follower sends a custom hashtag'}
         </div>
 
@@ -44,4 +44,3 @@ function renderSignalWidgets(signals) {
 export default function SignalWidgets({ signals }) {
   return <div>{renderSignalWidgets(signals)}</div>;
 }
-

@@ -45,32 +45,6 @@ ActiveRecord::Schema.define(version: 20170107212800) do
     t.index ["user_id"], name: "index_identities_on_user_id", using: :btree
   end
 
-  create_table "invoice_adjustments", force: :cascade do |t|
-    t.integer  "invoice_id",                          null: false
-    t.string   "stripe_invoice_item_id",              null: false
-    t.jsonb    "data",                   default: {}, null: false
-    t.integer  "amount",                              null: false
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.index ["invoice_id"], name: "index_invoice_adjustments_on_invoice_id", using: :btree
-    t.index ["stripe_invoice_item_id"], name: "index_invoice_adjustments_on_stripe_invoice_item_id", unique: true, using: :btree
-  end
-
-  create_table "invoices", force: :cascade do |t|
-    t.string   "stripe_invoice_id"
-    t.integer  "brand_id",                          null: false
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.datetime "paid_at"
-    t.integer  "amount"
-    t.jsonb    "data",              default: {},    null: false
-    t.datetime "period_start"
-    t.datetime "period_end"
-    t.boolean  "payment_failed",    default: false
-    t.index ["period_start"], name: "index_invoices_on_period_start", using: :btree
-    t.index ["stripe_invoice_id"], name: "index_invoices_on_stripe_invoice_id", unique: true, using: :btree
-  end
-
   create_table "listen_signals", force: :cascade do |t|
     t.integer  "brand_id"
     t.integer  "identity_id"
@@ -230,22 +204,8 @@ ActiveRecord::Schema.define(version: 20170107212800) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "versions", force: :cascade do |t|
-    t.string   "item_type",      null: false
-    t.integer  "item_id",        null: false
-    t.string   "event",          null: false
-    t.string   "whodunnit"
-    t.jsonb    "object"
-    t.datetime "created_at"
-    t.jsonb    "object_changes"
-    t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
-    t.index ["object"], name: "index_versions_on_object", using: :btree
-    t.index ["object_changes"], name: "index_versions_on_object_changes", using: :btree
-  end
-
   add_foreign_key "identities", "brands"
   add_foreign_key "identities", "users"
-  add_foreign_key "invoice_adjustments", "invoices"
   add_foreign_key "listen_signals", "brands"
   add_foreign_key "listen_signals", "identities"
   add_foreign_key "promotional_tweets", "listen_signals"

@@ -32,7 +32,7 @@
 .panel-new {
   border: solid 2px $signal-border;
   outline: dotted $signal-border 2px;
-  outline-offset: -7px;
+  outline-offset: -10px;
 
   .header-new, .body-new {
     color: $text-black;
@@ -43,16 +43,16 @@
   @include clickable-panel;
   position: relative;
   float: left;
-  margin-top: 28px;
+  margin-top: 10px;
   margin-right: 20px;
   display: inline-block;
-  width: 270px;
+  width: 250px;
   height: 280px;
   border-radius: 6px;
   color: $text-white;
   background-color: #fafbfc;
   box-shadow: $box-shadow1;
-  padding-top: 20px;
+  // padding-top: 20px;
   cursor: pointer;
 
   &:hover {
@@ -64,14 +64,38 @@
     text-decoration: none;
   }
 
+  &.active-tab{
+    background: #455361;
+    .circle {
+      background-color: #00d658;
+    }
+    .signal-status{
+      background: #fff;
+      color: #00d658;
+    }
+  }
 
   &.inactiveSignal {
     background-color: $dark-gray;
-
     .circle {
       background-color: $inactive-gray;
     }
+    .signal-status{
+      background-color: rgba(255, 255, 255, 0.19);
+      color: #f3f5f6;
+    }
   }
+}
+
+
+
+.padding-icon{
+  margin-top: 20px;
+}
+
+.panel-icon-new{
+  position: absolute;
+  bottom: 0;
 }
 
 .panel-icon {
@@ -140,7 +164,9 @@
   font-size: $base-caption-font-size !important;
   font-weight: 400;
 }
-
+.signal-all {
+  background-color: $signal-all;
+}
 .offers {
   background-color: $signal-turquoise;
 }
@@ -161,6 +187,12 @@
   background-color: $signal-dark-gray;
 }
 
+.panel-active-platform{
+  padding: 10px;
+  text-align: right;
+  padding-bottom: 20px;
+}
+
 .panel-label-text {
   margin-bottom: 0 !important;
 }
@@ -171,7 +203,10 @@
   .panel-header {
     margin-left: 0px;
     padding-left: 14px;
-    height: 60px;
+    height: 75px;
+    padding-top: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     .header-text {
       height: 42px;
     }
@@ -209,6 +244,10 @@
     text-decoration: none;
     font-weight: bold;
   }
+}
+
+.coming-soon-padding{
+  padding-top: 50px !important;
 }
 
 .coming-soon {
@@ -251,4 +290,3 @@
   font-weight: bold;
   margin-left: -4px;
 }
-

@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   force_ssl if: :should_ssl?
   protect_from_forgery with: :exception
   after_action :flash_to_http_header
+  before_action :set_paper_trail_whodunnit
 
   private
 

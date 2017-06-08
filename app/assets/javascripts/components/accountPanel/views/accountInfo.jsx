@@ -105,4 +105,3 @@ const ConnectedAccountInfo = connect((state) => {
 })(AccountInfo);
 
 export default provideHooks(hooks)(ConnectedAccountInfo);
-

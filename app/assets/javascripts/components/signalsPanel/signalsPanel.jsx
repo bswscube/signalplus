@@ -10,6 +10,7 @@ class SignalsPanel extends Component {
     const signalCounts = _.countBy(this.props.signals, (signal) => (signal.active));
     const activeCount = signalCounts.true || 0;
     const inactiveCount = signalCounts.false || 0;
+    const allCount = activeCount+inactiveCount || 0;
 
     if (activeCount > 0 || inactiveCount > 0) {
       const signalCounts = [];
