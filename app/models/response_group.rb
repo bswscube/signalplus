@@ -60,6 +60,10 @@ class ResponseGroup < ApplicationRecord
     responses.find_all(&:timed?)
   end
 
+  def daterange_response
+    responses.find_all(&:daterange?)
+  end
+
   # @return [Response, NilClass]
   def find_next_response(last_response_priority)
     response = sorted_responses_for_reply(last_response_priority).first

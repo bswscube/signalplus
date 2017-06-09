@@ -34,7 +34,7 @@ class ListenSignal < ApplicationRecord
     CONTEST     = :contest
     REMINDER    = :reminder
     CUSTOM      = :custom
-    SUPPORT      = :support
+    SUPPORT     = :support
 
     def self.values
       constants.map{ |t| const_get(t) }
@@ -59,6 +59,10 @@ class ListenSignal < ApplicationRecord
 
   def timed_responses
     responses.where(response_type: Response::Type::TIMED)
+  end
+
+  def daterange_response
+    responses.where(response_type: Response::Type::DATERANGE)
   end
 
   def response(to)

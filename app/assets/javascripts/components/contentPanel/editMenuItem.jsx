@@ -6,6 +6,7 @@ import SignalIcon from 'components/links/signal_icon';
 import ActivateSignalRadioButton from 'components/forms/activateSignalRadioButton';
 import _ from 'lodash';
 
+
 function renderInputBox(signal) {
   return (
     <div>
@@ -29,14 +30,15 @@ function renderSignalName(signal) {
 }
 
 
-export default function EditMenuItem({ menu, signal }) {
+
+export default function EditMenuItem({ menu, signal, brandInfo }) {
   return (
     <li className="uctext">
       <div className="editMenuItem editMenuItemOne">
         <Checkbox
           name="facebook"
           label='Facebook'
-          labelDescription="@brandhandle"
+          labelDescription='@brandhandle'
           className="checkboxSide"
         />
         <Checkbox
@@ -50,7 +52,7 @@ export default function EditMenuItem({ menu, signal }) {
       <Link
         {...menu.linkProps}
         activeClassName="active"
-        className="editMenuItem"
+        className="editMenuItem activeButton"
       >
         <ActivateSignalRadioButton signal={signal}/>
       </Link>

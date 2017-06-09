@@ -25,6 +25,7 @@ class Response < ApplicationRecord
     DEFAULT = 'default'
     FIRST   = 'first'
     TIMED   = 'timed'
+    DATERANGE = 'daterange'
     FLOW    = 'flow'
     NOT_COUNTED = [
       REPEAT  = 'repeat',
@@ -36,6 +37,7 @@ class Response < ApplicationRecord
     Type::DEFAULT => 0,
     Type::TIMED   => 0,
     Type::REPEAT  => 1000,
+    Type::DATERANGE  => 2000,
   }
 
   def self.not_expired
@@ -69,6 +71,19 @@ class Response < ApplicationRecord
     end
   end
 
+  def self.create_daterange_response(message, start_date, end_date, response_group)
+    Response.create do |r|
+      r.message = message
+      r.response_type = Type::DATERANGE
+      r.response_group_id = response_group.id
+      r.res_start_date = start_date
+      r.res_end_date = end_date
+      r.priority = DEFAULT_PRIORITY[Type::DATERANGE]
+    end
+  end
+
+
+
   def update_message(msg)
     update_attribute(:message, msg)
   end
@@ -91,6 +106,10 @@ class Response < ApplicationRecord
   # @return [Boolean]
   def timed?
     response_type == Type::TIMED
+  end
+
+  def daterange?
+    response_type == Type::DATERANGE
   end
 
   # @return [Boolean]

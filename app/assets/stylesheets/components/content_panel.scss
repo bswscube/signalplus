@@ -290,6 +290,7 @@ img.arrow {
   float: left;
   padding: 0px 10px;
   margin-right: 10px;
+  font-weight: normal;
 }
 
 .signalLabel{
@@ -298,10 +299,20 @@ img.arrow {
 
 .signalResponseInput{
   height: 40px;
-  font-size: 16px;
+  font-size: 22px;
   border-radius: 10px;
+  font-weight: normal;
 }
 
 .checkboxSide{
   margin-left: 20px;
+}
+.content-panel{
+  margin-top: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.24);
+}
+
+.activeButton{
+  text-align: center !important;
+  padding: 0px !important;
 }

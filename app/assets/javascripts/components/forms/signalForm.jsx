@@ -52,7 +52,7 @@ class UndecoratedSignalForm extends Component {
     } = this.props;
 
     return (
-      <form className='content-panel' onSubmit={handleSubmit(this.updateSignal)}>
+      <form className='content-panel clearfix' onSubmit={handleSubmit(this.updateSignal)}>
         {children}
       </form>
     );
@@ -114,6 +114,7 @@ export const RESPONSE_TYPES = {
   DEFAULT: 'default',
   REPEAT: 'repeat',
   TIMED: 'timed',
+  DATERANGE: 'daterange',
 };
 
 const EDITABLE_SIGNAL_FIELDS = [

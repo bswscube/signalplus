@@ -27,6 +27,7 @@
 .footer {
   height: 60px;
   background-color: $footer-gray;
+    z-index: 99999;
 }
 
 .footer-brand {

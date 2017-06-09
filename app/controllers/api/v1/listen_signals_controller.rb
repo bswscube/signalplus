@@ -53,11 +53,11 @@ class Api::V1::ListenSignalsController < Api::V1::BaseController
   end
 
   def create_response_params
-    params.permit(:default_response, :repeat_response, { responses: [:id, :message, :expiration_date, :res_start_date] })
+    params.permit(:default_response, :repeat_response, { responses: [:id, :message, :expiration_date] }, { responses_date_range: [:id, :message, :res_start_date, :res_end_date] })
   end
 
   def update_signal_params
-    params.permit(:signal_type, :expiration_date, :res_start_date)
+    params.permit(:signal_type, :expiration_date, :res_start_date, :res_end_date)
   end
 
   def patch_signal_params

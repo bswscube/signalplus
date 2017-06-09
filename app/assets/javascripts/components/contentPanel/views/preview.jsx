@@ -7,7 +7,6 @@ const DEFAULT_RESPONSE_TYPE = 'default';
 const REPEAT_RESPONSE_TYPE = 'repeat';
 const CUSTOM_RESPONSE_TYPE = 'timed';
 
-
 function getResponse(signal, type) {
   const response = _.find(signal.responses, { response_type: type });
   const message = _.get(response, 'message', '')
@@ -99,6 +98,3 @@ export default function Preview(props) {
     </div>
   );
 }
-
-
-

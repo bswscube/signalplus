@@ -34,6 +34,15 @@ export function timedResponseValidator(responses) {
     });
   }
 
+  if (responses.length) {
+    responses.forEach((response, index) => {
+      const responseErrors = {};
+      responseErrors.message = responseTextValidator(response.message, 'Timed');
+      responseErrors.res_start_date = expirationDateValidator(response.res_start_date);
+      responseArrayErrors[index] = responseErrors;
+    });
+  }
+
   return responseArrayErrors.length ? responseArrayErrors : null;
 }
 

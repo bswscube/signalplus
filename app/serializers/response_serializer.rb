@@ -14,5 +14,5 @@
 #
 
 class ResponseSerializer < ActiveModel::Serializer
-  attributes :id, :message, :response_type, :expiration_date, :res_start_date, :priority
+  attributes :id, :message, :response_type, :expiration_date, :res_start_date, :res_start_date, :priority
 end
