@@ -100,3 +100,7 @@ group :test do
   gem 'webmock'
   gem 'stripe-ruby-mock', '~> 2.3.1', :require => 'stripe_mock'
 end
+
+group :production do
+  gem 'pg', '~> 0.15'
+end
