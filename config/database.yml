@@ -18,16 +18,16 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
   port: 5432
-  username: signaluser
-  password: signalpassword
   pool: 5
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
 
 development:
   <<: *default
+  host: localhost
+  username: signaluser
+  password: signalpassword
   database: signalplus
 
   # The specified database role being used to connect to postgres.
@@ -62,6 +62,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  host: localhost
+  username: signaluser
+  password: signalpassword
   database: signalplus_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -85,6 +88,8 @@ test:
 #
 production:
   <<: *default
-  # database: project-signal_production
-  # username: project-signal
-  # password: <%= ENV['PROJECT-SIGNAL_DATABASE_PASSWORD'] %>
+  host: ec2-54-235-72-121.compute-1.amazonaws.com
+  database: dfngvq69k120k2
+  username: hmiwvzygwodjjs
+  password: fd08fc42cf14442c2e44f56f21227f913e807a2060c8e23f9f052c0ac49f8dd7
+  url: postgres://hmiwvzygwodjjs:fd08fc42cf14442c2e44f56f21227f913e807a2060c8e23f9f052c0ac49f8dd7@ec2-54-235-72-121.compute-1.amazonaws.com:5432/dfngvq69k120k2
